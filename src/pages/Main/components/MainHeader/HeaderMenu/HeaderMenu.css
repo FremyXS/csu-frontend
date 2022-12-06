@@ -1,0 +1,51 @@
+.header-menu{
+    margin-bottom: 183px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 27px;
+}
+
+.header-menu--clmn{
+    display: flex;
+    flex-direction: row;
+    width: 50%;    
+    align-items: center;
+}
+
+.header-menu :nth-child(2){
+    justify-content: flex-end
+}
+
+.menu-logo{
+    width: 120px;
+    margin-right: 50px;
+}
+
+.menu-separator{
+    color: #A9C5E0;
+    height: 14px;
+    width: 0;
+}
+
+.menu-name{
+    font-size: 13px;
+    color: #A9C5E0;
+    margin-left: 30px;
+}
+
+.header-menu--number{
+    display: flex;
+    flex-direction: row;
+    margin-right: 70px;
+}
+
+.number-icon{
+    height: 14px;
+    margin-right: 12px;
+}
+
+.number-value{
+    font-size: 13px;
+    color: #A9C5E0;
+}

@@ -1,0 +1,60 @@
+.main-footer{
+    background: #23415E;
+    padding-left: 155px;
+    padding-right: 135px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 98px;
+    padding-bottom: 70px;
+}
+
+.main-footer div{
+    width: 33%;
+}
+
+.footer-logo{
+    
+}
+
+.menu-logo{
+    width: 140px;
+}
+
+.footer-list{
+    display: flex;
+    flex-direction: row;
+}
+.list-element{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 36px;
+    color: #FFFFFF
+}
+
+.footer-list div.list-element:nth-child(2){
+    margin-left: 60px;
+}
+
+
+.list-element dl dt:last-child{
+
+}
+
+.footer-contacts{    
+    display: flex;
+    justify-content: end;
+}
+.footer-contacts dl{
+    max-width: 170px;
+    font-size: 15px;
+    color: #A9C5E0;
+}
+
+.footer-contacts dl dt{
+    margin-bottom: 19px;
+}
+
+.footer-contacts dl dt:last-child{
+    margin-bottom: 0;
+}

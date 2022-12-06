@@ -1,13 +1,17 @@
 import React from 'react';
+import 'normalize.css';
 
-import cat from '@Assets/images/cat.jpg';
+import MainHeader from './components/MainHeader/MainHeader';
+import MainContainer from './components/MainContainer/MainContainer';
+import MainFooter from './components/MainFooter/MainFooter';
 
 import './styles.css';
 
 const Main = () => (
     <div className="main-page">
-        <h1 className="main-page__title">Главная</h1>
-        <img className="main-page__cat-img" src={cat} />
+        <MainHeader />
+        <MainContainer />
+        <MainFooter />
     </div>
 );
 

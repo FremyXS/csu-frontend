@@ -1,0 +1,40 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 96px 0;
+}
+
+.main-container--name{
+    color: #2A496B;
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.main-container--components{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container--components div.components-row:nth-child(1){
+    margin-top: 146px;
+}
+
+.main-container--components div.components-row:nth-child(2){
+    margin-top: 113px;
+}
+
+.main-container--components div.components-row:nth-child(3){
+    margin-top: 88px;
+}
+
+.components-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around
+}
+
+.components-row div.component:nth-child(1){
+    margin-right: 12px;
+}

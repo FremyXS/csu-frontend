@@ -5,21 +5,21 @@ import logoIcon from '@Assets/images/icons/logoIcon.svg';
 import './MainFooter.css';
 
 const MainFooter = () => (
-    <div className="main-footer">
+    <div className="footer">
         <div className="footer-logo">
-            <img className="menu-logo" src={logoIcon} />
+            <img className="footer-logo__img" src={logoIcon} />
         </div>
         <div className="footer-list">
-            <div className="list-element">
-                <dl>
+            <div className="footer-list__element">
+                <dl className="footer-list__element-row">
                     <dt>О компании</dt>
                     <dt>Вакансии</dt>
                     <dt>Клиенту</dt>
                     <dt>Франчайзинг</dt>
                 </dl>
             </div>
-            <div className="list-element">
-                <dl>
+            <div className="footer-list__element">
+                <dl className="footer-list__element-row">
                     <dt>Доставка из Китая</dt>
                     <dt>Все услуги</dt>
                     <dt>Акции</dt>

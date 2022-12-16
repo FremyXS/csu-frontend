@@ -6,37 +6,37 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#376a9a",endColorstr="#2b5276",GradientType=1);
 }
 
-.main-header--info{
+.header-main__info{
     display: flex;
     flex-direction: row;
+    width: 50%;
 }
 
-.main-header--image{
-    line-height: 0;
-    height: 100%;
-    position:relative;
-}
-
-.text-name{
+.main-header__text-name{
     font-size: 64px;
     color: #FFFFFF;
     font-weight: 700;
     max-width: 660px;
 }
 
-.text-desk{
+.main-header__text-desk{
     margin-top: 18px;
     font-size: 16px;
     max-width: 550px;
     color: #FFFFFF;
     line-height: 24px;
 }
-.main-header--btns{
+.main-header__buttons{
     margin-top: 77px;
     /* margin-bottom: 32px; */
     text-align: center;
 }
 
-.main-header--btns button:nth-child(1){
+.main-header__buttons button:nth-child(1){
     margin-right: 11px;
+}
+
+@media screen and (max-width: 800px)
+{
+
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './MainHeader.css';
 import HeaderButtonon from './HeaderButton/HeaderButton';
 
@@ -8,6 +8,8 @@ import HeaderMenu from './HeaderMenu/HeaderMenu';
 import car from '@Assets/images/car.png';
 import blank from '@Assets/images/blank.png';
 
+import { useWindowDimensions } from '@Helpers/useWindowDimensions';
+
 const headerText = {
     sliderOne: {
         name: 'Срочная доставка день в день',
@@ -15,7 +17,7 @@ const headerText = {
             срочной курьерской доставки корреспондеции и других видов отправлений.',
         image: car,
         backgroundSize: '510px',
-        backgroundPosition: 'right 132px bottom',
+        backgroundPosition: 'right 130px bottom',
     },
     sliderTwo: {
         name: 'Подписание договора за 1 час',
@@ -29,12 +31,14 @@ const headerText = {
 
 const MainHeader = () => {
     const [header, setHeader] = useState(headerText.sliderOne);
+    const { width } = useWindowDimensions();
+
     return (
         <div className="header">
             <div
-                className="main-header"
+                className="header-main"
                 style={{
-                    backgroundImage: `url(${header.image})`,
+                    backgroundImage: width < 1150 ? '' : `url(${header.image})`,
                     backgroundPosition: `${header.backgroundPosition}`,
                     backgroundSize: `${header.backgroundSize}`,
                     backgroundRepeat: 'no-repeat',
@@ -43,10 +47,14 @@ const MainHeader = () => {
                 }}
             >
                 <HeaderMenu />
-                <div className="main-header--info">
-                    <div className="main-header--text">
-                        <div className="text-name">{header.name}</div>
-                        <div className="text-desk">{header.desk}</div>
+                <div className="header-main__info">
+                    <div className="main-header__text">
+                        <div className="main-header__text-name">
+                            {header.name}
+                        </div>
+                        <div className="main-header__text-desk">
+                            {header.desk}
+                        </div>
                         <ButtonComponent
                             value="Заказать доставку"
                             style={{ marginTop: 87 }}
@@ -54,7 +62,7 @@ const MainHeader = () => {
                         />
                     </div>
                 </div>
-                <div className="main-header--btns">
+                <div className="main-header__buttons">
                     <HeaderButtonon
                         onClick={() => setHeader(headerText.sliderOne)}
                     />

@@ -1,7 +1,6 @@
 .header-menu{
     margin-bottom: 183px;
     display: flex;
-    flex-direction: row;
     align-items: center;
     padding-top: 27px;
 }
@@ -48,4 +47,8 @@
 .number-value{
     font-size: 13px;
     color: #A9C5E0;
+}
+
+@media screen and (max-width: 400px){
+
 }

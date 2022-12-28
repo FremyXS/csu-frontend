@@ -26,7 +26,7 @@
     height: 52px;
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 767px){
     .color-out{
         padding: 0;
         width: 100%;

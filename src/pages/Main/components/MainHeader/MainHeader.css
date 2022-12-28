@@ -15,15 +15,13 @@
 .main-header__text-name{
     font-size: 64px;
     color: #FFFFFF;
-    font-weight: 700;
-    
+    font-weight: 700;    
     line-height: 1;
 }
 
 .main-header__text-desk{
     margin-top: 18px;
     font-size: 16px;
-    max-width: 550px;
     color: #FFFFFF;
     line-height: 24px;
 }
@@ -37,12 +35,24 @@
     margin-right: 11px;
 }
 
-@media screen and (max-width: 800px)
-{
 
+
+@media screen and (max-width: 1439px)
+{
+    .header-main__info{
+        width: 100%;
+    }
+    .main-header__text-name{
+        font-size: 64px;
+        font-weight: 800;
+    }
+    .main-header__text-desk{
+        font-weight: 400;
+        font-size: 16px;
+    }
 }
 
-@media screen and (max-width: 400px)
+@media screen and (max-width: 767px)
 {
     .header-main__info{
         width: 100%;
@@ -50,10 +60,8 @@
     .main-header__text-name{
         font-size: 38px;
         font-weight: 800;
-        max-width: 345px;
     }
     .main-header__text-desk{
-        max-width: 345px;
         font-weight: 400;
         font-size: 16px;
     }

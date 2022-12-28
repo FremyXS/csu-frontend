@@ -4,13 +4,14 @@ import React from 'react';
 import phoneIcon from '@Assets/images/icons/phoneIcon.svg';
 import logoIcon from '@Assets/images/icons/logoIcon.svg';
 import { useWindowDimensions } from '@Helpers/useWindowDimensions';
+
 import './HeaderMenu.css';
 
 const HeaderMenu = () => {
     const { width } = useWindowDimensions();
     return (
         <div className="header-menu">
-            {width <= 400 && (
+            {width < 768 && (
                 <>
                     <div className="header-menu--clmn">
                         <img className="menu-logo" src={logoIcon} />
@@ -20,7 +21,21 @@ const HeaderMenu = () => {
                     </div>
                 </>
             )}
-            {width > 800 && (
+            {width >= 768 && width < 1440 && (
+                <>
+                    <div className="header-menu--clmn">
+                        <img className="menu-logo" src={logoIcon} />
+                        <span className="menu-separator">|</span>
+                        <div className="menu-name">
+                            Курьерская служба доставки
+                        </div>
+                    </div>
+                    <div className="header-menu--clmn">
+                        <ButtonComponent value="Вход" styleColor="color-in" />
+                    </div>
+                </>
+            )}
+            {width > 1440 && (
                 <>
                     <div className="header-menu--clmn">
                         <img className="menu-logo" src={logoIcon} />

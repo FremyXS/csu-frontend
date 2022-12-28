@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './MainHeader.css';
 import HeaderButtonon from './HeaderButton/HeaderButton';
 
 import ButtonComponent from '@Components/ButtonComponent/ButtonComponent';
@@ -9,6 +8,8 @@ import car from '@Assets/images/car.png';
 import blank from '@Assets/images/blank.png';
 
 import { useWindowDimensions } from '@Helpers/useWindowDimensions';
+
+import './MainHeader.css';
 
 const styleAdvancaed = {
     mobile: {
@@ -42,7 +43,7 @@ const MainHeader = () => {
 
     return (
         <div className="header">
-            {width <= 400 && (
+            {width < 768 && (
                 <div className="header-main" style={styleAdvancaed.mobile}>
                     <HeaderMenu />
                     <div className="header-main__info">
@@ -70,7 +71,35 @@ const MainHeader = () => {
                     </div>
                 </div>
             )}
-            {width > 800 && (
+            {width >= 768 && width < 1440 && (
+                <div className="header-main" style={styleAdvancaed.mobile}>
+                    <HeaderMenu />
+                    <div className="header-main__info">
+                        <div className="main-header__text">
+                            <div className="main-header__text-name">
+                                {header.name}
+                            </div>
+                            <div className="main-header__text-desk">
+                                {header.desk}
+                            </div>
+                            <ButtonComponent
+                                value="Заказать доставку"
+                                style={{ marginTop: 87 }}
+                                styleColor="color-out"
+                            />
+                        </div>
+                    </div>
+                    <div className="main-header__buttons">
+                        <HeaderButtonon
+                            onClick={() => setHeader(headerText.sliderOne)}
+                        />
+                        <HeaderButtonon
+                            onClick={() => setHeader(headerText.sliderTwo)}
+                        />
+                    </div>
+                </div>
+            )}
+            {width >= 1440 && (
                 <div
                     className="header-main"
                     style={{

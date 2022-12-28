@@ -27,12 +27,12 @@
     margin-bottom: 0px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1439px) {
     .main-container{
         padding: 96px 15px;
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 767px){
     
 }

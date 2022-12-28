@@ -25,13 +25,13 @@
     font-size: 15px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1439px) {
     .component{
         width: 50%;
     }
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 767px){
     .component{
         width: 100%;
     }

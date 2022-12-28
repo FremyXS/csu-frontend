@@ -1,13 +1,12 @@
 .footer{
     background: #23415E;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 
     padding: 98px 135px 70px 155px;
 }
 
-.footer div{
+.footer > div{
     width: 33%;
 }
 
@@ -55,7 +54,7 @@
     margin-bottom: 0;
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1439px){
     .footer{
         padding: 98px 133px 96px 35px;
     }
@@ -66,5 +65,24 @@
 
     .footer-logo{
         max-width: 235px;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .footer{
+        padding: 0;
+        padding-top: 98px;
+        padding-left: 15px;
+        padding-bottom: 96px;
+        flex-direction: column;
+    }
+    .footer div{
+        width: 100%;
+    }
+    .footer-logo,.footer-list{
+        margin-bottom: 64px;
+    }
+    .footer-contacts{
+        justify-content: start;
     }
 }

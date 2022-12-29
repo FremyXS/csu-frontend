@@ -9,11 +9,14 @@ import 'core-js';
 import App from './src/App';
 
 import '@Styles/global.css';
+import Container from '@Layouts/Container/Container';
 
 const root = ReactDOM.createRoot(document.getElementById('app-root'));
 
 root.render(
     <BrowserRouter>
-        <App />
+        <Container>
+            <App />
+        </Container>
     </BrowserRouter>
 );

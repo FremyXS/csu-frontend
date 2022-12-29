@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './HeaderButton.css';
 
-const HeaderButton = ({ onClick }) => {
+const HeaderButton = ({ id, onClick, isActive }) => {
     return (
-        <button className="header-btn" type="button" onClick={onClick}></button>
+        <button
+            id={id}
+            className={`header-btn ${isActive && 'active'}`}
+            type="button"
+            onClick={onClick}
+        ></button>
     );
 };
 

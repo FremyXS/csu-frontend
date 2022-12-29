@@ -41,6 +41,16 @@ const MainHeader = () => {
     const [header, setHeader] = useState(headerText.sliderOne);
     const { width } = useWindowDimensions();
 
+    const onClickSlidbar = (e) => {
+        const ID = e.target.id;
+        console.log(ID);
+        if (ID === '2') {
+            setHeader(headerText.sliderTwo);
+        } else {
+            setHeader(headerText.sliderOne);
+        }
+    };
+
     return (
         <div className="header">
             {width < 768 && (
@@ -62,10 +72,14 @@ const MainHeader = () => {
                     </div>
                     <div className="main-header__buttons">
                         <HeaderButtonon
-                            onClick={() => setHeader(headerText.sliderOne)}
+                            id="1"
+                            isActive={header === headerText.sliderOne}
+                            onClick={onClickSlidbar}
                         />
                         <HeaderButtonon
-                            onClick={() => setHeader(headerText.sliderTwo)}
+                            id="2"
+                            isActive={header === headerText.sliderTwo}
+                            onClick={onClickSlidbar}
                         />
                     </div>
                 </div>
@@ -89,10 +103,14 @@ const MainHeader = () => {
                     </div>
                     <div className="main-header__buttons">
                         <HeaderButtonon
-                            onClick={() => setHeader(headerText.sliderOne)}
+                            id="1"
+                            isActive={header === headerText.sliderOne}
+                            onClick={onClickSlidbar}
                         />
                         <HeaderButtonon
-                            onClick={() => setHeader(headerText.sliderTwo)}
+                            id="2"
+                            isActive={header === headerText.sliderTwo}
+                            onClick={onClickSlidbar}
                         />
                     </div>
                 </div>
@@ -127,10 +145,14 @@ const MainHeader = () => {
                     </div>
                     <div className="main-header__buttons">
                         <HeaderButtonon
-                            onClick={() => setHeader(headerText.sliderOne)}
+                            id="1"
+                            isActive={header === headerText.sliderOne}
+                            onClick={onClickSlidbar}
                         />
                         <HeaderButtonon
-                            onClick={() => setHeader(headerText.sliderTwo)}
+                            id="2"
+                            isActive={header === headerText.sliderTwo}
+                            onClick={onClickSlidbar}
                         />
                     </div>
                 </div>

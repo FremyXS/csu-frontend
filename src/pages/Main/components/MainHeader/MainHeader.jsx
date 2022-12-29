@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import HeaderButtonon from './HeaderButton/HeaderButton';
 
 import ButtonComponent from '@Components/ButtonComponent/ButtonComponent';
-import HeaderMenu from './HeaderMenu/HeaderMenu';
 
 import car from '@Assets/images/car.png';
 import blank from '@Assets/images/blank.png';
@@ -15,6 +14,7 @@ const styleAdvancaed = {
     mobile: {
         padding: '0 15px',
         paddingBottom: '32px',
+        paddingTop: '185px',
     },
 };
 
@@ -45,7 +45,6 @@ const MainHeader = () => {
         <div className="header">
             {width < 768 && (
                 <div className="header-main" style={styleAdvancaed.mobile}>
-                    <HeaderMenu />
                     <div className="header-main__info">
                         <div className="main-header__text">
                             <div className="main-header__text-name">
@@ -73,7 +72,6 @@ const MainHeader = () => {
             )}
             {width >= 768 && width < 1440 && (
                 <div className="header-main" style={styleAdvancaed.mobile}>
-                    <HeaderMenu />
                     <div className="header-main__info">
                         <div className="main-header__text">
                             <div className="main-header__text-name">
@@ -109,9 +107,9 @@ const MainHeader = () => {
                         backgroundRepeat: 'no-repeat',
                         padding: '0 135px',
                         paddingBottom: '32px',
+                        paddingTop: '185px',
                     }}
                 >
-                    <HeaderMenu />
                     <div className="header-main__info">
                         <div className="main-header__text">
                             <div className="main-header__text-name">

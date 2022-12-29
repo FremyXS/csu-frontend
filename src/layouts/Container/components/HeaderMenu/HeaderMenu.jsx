@@ -35,7 +35,7 @@ const HeaderMenu = () => {
                     </div>
                 </>
             )}
-            {width > 1440 && (
+            {width >= 1440 && (
                 <>
                     <div className="header-menu--clmn">
                         <img className="menu-logo" src={logoIcon} />

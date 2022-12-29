@@ -3,7 +3,6 @@ import 'normalize.css';
 
 import MainHeader from './components/MainHeader/MainHeader';
 import MainContainer from './components/MainContainer/MainContainer';
-import MainFooter from './components/MainFooter/MainFooter';
 
 import { useWindowDimensions } from '@Helpers/useWindowDimensions';
 
@@ -16,7 +15,6 @@ const Main = () => {
         <div className="main-page">
             <MainHeader />
             <MainContainer />
-            <MainFooter />
         </div>
     );
 };

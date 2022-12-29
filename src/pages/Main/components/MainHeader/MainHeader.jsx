@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import HeaderButtonon from './HeaderButton/HeaderButton';
 
 import ButtonComponent from '@Components/ButtonComponent/ButtonComponent';
@@ -43,13 +43,25 @@ const MainHeader = () => {
 
     const onClickSlidbar = (e) => {
         const ID = e.target.id;
-        console.log(ID);
+
         if (ID === '2') {
             setHeader(headerText.sliderTwo);
         } else {
             setHeader(headerText.sliderOne);
         }
     };
+
+    const changeSlider = () => {
+        setHeader(
+            header === headerText.sliderOne
+                ? headerText.sliderTwo
+                : headerText.sliderOne
+        );
+    };
+
+    useEffect(() => {
+        setInterval(changeSlider, 8000);
+    }, [header]);
 
     return (
         <div className="header">

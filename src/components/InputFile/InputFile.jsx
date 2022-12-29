@@ -6,11 +6,11 @@ import './InputFile.less';
 
 const InputFile = ({ style }) => {
     return (
-        <div class="input-file" style={style}>
-            <img src={photoIcon} sizes={20} />
-            <input class="input-file__button" type="file" />+ Добавить
+        <label className="input-file" style={style}>
+            <img className="input-file__image" src={photoIcon} sizes={20} />
+            <input className="input-file__button" type="file" />+ Добавить
             изображение
-        </div>
+        </label>
     );
 };
 

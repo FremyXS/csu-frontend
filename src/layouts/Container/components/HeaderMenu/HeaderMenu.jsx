@@ -7,7 +7,7 @@ import { useWindowDimensions } from '@Helpers/useWindowDimensions';
 
 import './HeaderMenu.css';
 
-const HeaderMenu = () => {
+const HeaderMenu = ({ onClick }) => {
     const { width } = useWindowDimensions();
     return (
         <div className="header-menu">
@@ -17,7 +17,11 @@ const HeaderMenu = () => {
                         <img className="menu-logo" src={logoIcon} />
                     </div>
                     <div className="header-menu--clmn">
-                        <ButtonComponent value="Вход" styleColor="color-in" />
+                        <ButtonComponent
+                            onClick={onClick}
+                            value="Вход"
+                            styleColor="color-in"
+                        />
                     </div>
                 </>
             )}
@@ -31,7 +35,11 @@ const HeaderMenu = () => {
                         </div>
                     </div>
                     <div className="header-menu--clmn">
-                        <ButtonComponent value="Вход" styleColor="color-in" />
+                        <ButtonComponent
+                            onClick={onClick}
+                            value="Вход"
+                            styleColor="color-in"
+                        />
                     </div>
                 </>
             )}
@@ -51,7 +59,11 @@ const HeaderMenu = () => {
                                 8 (909) 023-12-51
                             </div>
                         </div>
-                        <ButtonComponent value="Вход" styleColor="color-in" />
+                        <ButtonComponent
+                            onClick={onClick}
+                            value="Вход"
+                            styleColor="color-in"
+                        />
                     </div>
                 </>
             )}
